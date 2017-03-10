@@ -36,7 +36,7 @@ app.use("/api",(req,res)=>{
 		if(err)
 			res.send(err);
 		else
-			res.json({"original_url":reqUrl.url,"short_url":urlobj.protocol+"//"+urlobj.hostname+"/"+reqUrl.shortUrl});
+			res.json({"original_url":reqUrl.url,"short_url":"https://fast-waters-44002.herokuapp.com/"+reqUrl.shortUrl});
 	})
 })
 app.use("/:query",(req,res)=>{
