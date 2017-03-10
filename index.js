@@ -9,9 +9,8 @@ app.use(express.static("public"));
 app.set("view engine","pug");
 app.set("views","./views");
 
-var url = "mongodb://onur113:merhaba@ds125060.mlab.com:25060/urls"
-// Before deploy the app you must remove the code above and uncomment the code below
-//var url = process.env.MONGOLAB_URI;
+
+var url = process.env.MONGOLAB_URI;
 mongoose.Promise = global.Promise;
 mongoose.connect(url);
 
